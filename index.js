@@ -1,18 +1,9 @@
-class Numberwrapper {
-
-    #value;
-    constructor(value) {
-        this.#value = value;
-    }
-
-    get value() {
-        console.log(this.#value);
-    }
-
-    set value(newvalue) {
-        this.#value = newvalue;
+class Myclass {
+    method() {
+        console.log('プロトタイプのメソッド')
     }
 }
+const instance = new Myclass();
 
-const numberwrapper = new Numberwrapper(1);
-numberwrapper.value;
+const Myclassprototype = Object.getPrototypeOf(instance);
+console.log(Myclassprototype === Myclass.prototype);
