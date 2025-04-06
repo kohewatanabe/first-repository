@@ -1,14 +1,18 @@
-class Counter {
-    count = 0;
+class Numberwrapper {
 
-    up = () => {
-        this.increment();
-    };
-    increment() {
-        this.count++;
+    #value;
+    constructor(value) {
+        this.#value = value;
+    }
+
+    get value() {
+        console.log(this.#value);
+    }
+
+    set value(newvalue) {
+        this.#value = newvalue;
     }
 }
-const counter = new Counter();
-const up = counter.up;
-up();
-console.log(counter.count);
+
+const numberwrapper = new Numberwrapper(1);
+numberwrapper.value;
