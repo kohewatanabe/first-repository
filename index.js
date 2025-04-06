@@ -1,8 +1,11 @@
-class Conflictclass {
-    method = () => {
-        console.log('インスタンスオブジェクト');
+class Parent {
+    static hello() {
+        return 'Hello';
     }
 }
 
-conflictclass = new Conflictclass();
-console.log(conflictclass);
+class Child extends Parent {
+
+}
+
+console.log(Child.hello());
