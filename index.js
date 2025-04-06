@@ -1,9 +1,8 @@
-class Myclass {
-    method() {
-        console.log('プロトタイプのメソッド')
+class Conflictclass {
+    method = () => {
+        console.log('インスタンスオブジェクト');
     }
 }
-const instance = new Myclass();
 
-const Myclassprototype = Object.getPrototypeOf(instance);
-console.log(Myclassprototype === Myclass.prototype);
+conflictclass = new Conflictclass();
+console.log(conflictclass);
